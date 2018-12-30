@@ -1,0 +1,60 @@
+<?php
+
+// inc
+$lang['lc_0'] = "Remove all";
+$lang['lc_1'] = "Broken Links";
+$lang['lc_2'] = "List of broken links in the Article";
+$lang['lc_3'] = "Articles containing the broken link";
+$lang['lc_4'] = "Date - Article Title";
+$lang['lc_5'] = "The number of broken links in this article";
+$lang['lc_6'] = "Show broken links";
+$lang['lc_7'] = "Incorrect information";
+$lang['lc_8'] = "Unable to verify information";
+$lang['lc_9'] = "Xfield name";
+$lang['lc_10'] = "Broken link";
+$lang['lc_11'] = "Last check";
+$lang['lc_12'] = "Check count";
+$lang['lc_13'] = "Actions";
+$lang['lc_14'] = "Clear";
+$lang['lc_15'] = "Settings";
+$lang['lc_16'] = "System settings";
+$lang['lc_17'] = "Save";
+$lang['lc_18'] = "URL Use the insert {code} instead of the code.";
+$lang['lc_19'] = "Enter each line of a text";
+$lang['lc_20'] = "<b>URL ( Link ):</b> Page URL ( Direct Link )";
+$lang['lc_21'] = "<b>Code ( Video / Page Code )</b> Video or page code. example: u2UhQAhLc2Y";
+$lang['lc_22'] = "No check";
+$lang['lc_23'] = "Check";
+$lang['lc_24'] = "Code";
+$lang['lc_25'] = "URL";
+$lang['lc_26'] = "Information";
+$lang['lc_30'] = "Notification message";
+$lang['lc_31'] = "Special message headers and content to be sent to users who have added the article";
+$lang['lc_32'] = "Links: ";
+$lang['lc_33'] = "articles: ";
+$lang['lc_34'] = "Broken link record not found";
+$lang['lc_36'] = "Main Page";
+$lang['lc_37'] = "VideoPart integration";
+$lang['lc_38'] = "If you activate this setting, you can use with <a target=\"_blank\" href=\"https://shop.dle.net.tr/ucretli-modul/537-dle-video-part-sistemi.html\">VideoPart</a> module, if any video part content delete, you can delete part or replace with text";
+$lang['lc_39'] = "Active";
+$lang['lc_40'] = "Passive";
+//$lang['lc_41'] = "Delete part";
+//$lang['lc_42'] = "Replace with text";
+//$lang['lc_43'] = "Replacement text for part";
+$lang['lc_44'] = "Number of will be checked URL for each control";
+$lang['lc_45'] = "Checks URLs till you specified. Thinks this value with timeout value. Choose a low number as possible.";
+$lang['lc_46'] = "Connection timeout for URL control";
+$lang['lc_47'] = "If connection time exceeds you specified, checking will be skipped. This prevents system locking.";
+$lang['lc_48'] = "Data List integration";
+$lang['lc_49'] = "If you activate this setting, you can use with <a target=\"_blank\" href=\"#\">Data List</a> module, please type URL field of Data List module";
+$lang['lc_50'] = "Type name of field, contains URL";
+
+// ajax
+$lang['lc_27'] = "Settings saved successfully.";
+//$lang['lc_28'] = "Records successfully deleted.";
+$lang['lc_29'] = "Notice has been sent successfully.";
+
+// mass
+$lang['lc_35'] = "Link entries deleted successfully";
+
+?>

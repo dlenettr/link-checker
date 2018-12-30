@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>Link Checker</id>
+	<version>1.2</version>
+	<vqmver>2.4.1</vqmver>
+	<author>MaRZoCHi</author>
+	<file name="engine/inc/massactions.php">
+		<operation>
+			<ignoreif><![CDATA[$action == "mass_link_discard"]]></ignoreif>
+			<search position="before"><![CDATA[elseif( $action == "do_mass_delete" ) {]]></search>
+			<add><![CDATA[
+// Link Checker
+else if ( $action == "mass_link_discard" ) {
+	include ENGINE_DIR . "/inc/linkchecker.mass.php";
+}
+// Link Checker]]></add>
+		</operation>
+	</file>
+</modification>

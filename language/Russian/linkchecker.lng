@@ -1,0 +1,60 @@
+<?php
+
+// inc
+$lang['lc_0'] = "Удалить все";
+$lang['lc_1'] = "Битые ссылки";
+$lang['lc_2'] = "Список битых ссылок в статье";
+$lang['lc_3'] = "Статьи, содержащие неработающие ссылки";
+$lang['lc_4'] = "Дата - Заголовок";
+$lang['lc_5'] = "Количество битых ссылок в этой статье";
+$lang['lc_6'] = "Показать битые ссылки";
+$lang['lc_7'] = "Неверная информация";
+$lang['lc_8'] = "Невозможно проверить информацию";
+$lang['lc_9'] = "Имя Xfield";
+$lang['lc_10'] = "Битая ссылка";
+$lang['lc_11'] = "Последняя проверка";
+$lang['lc_12'] = "Проверить счетчик";
+$lang['lc_13'] = "Действия";
+$lang['lc_14'] = "Очистить";
+$lang['lc_15'] = "Настройка";
+$lang['lc_16'] = "Системные настройки";
+$lang['lc_17'] = "Сохранить";
+$lang['lc_18'] = "URL Используйте вставку {code} вместо кода.";
+$lang['lc_19'] = "Введите каждую строку текста";
+$lang['lc_20'] = "<b>URL ( Ссылка ):</b> URL страницы ( прямая ссылка )";
+$lang['lc_21'] = "<b>Код ( Видео / Страницы )</b> Код видео или страницы. Например: u2UhQAhLc2Y";
+$lang['lc_22'] = "Не проверено";
+$lang['lc_23'] = "Проверка";
+$lang['lc_24'] = "Код";
+$lang['lc_25'] = "URL";
+$lang['lc_26'] = "Информация";
+$lang['lc_30'] = "Уведомление";
+$lang['lc_31'] = "Специальные заголовки сообщений и контент для отправки автору статьи";
+$lang['lc_32'] = "Ссылки: ";
+$lang['lc_33'] = "статьи: ";
+$lang['lc_34'] = "Запись битой ссылки не найдена";
+$lang['lc_36'] = "Main Page";
+$lang['lc_37'] = "VideoPart integration";
+$lang['lc_38'] = "If you activate this setting, you can use with <a target=\"_blank\" href=\"https://shop.dle.net.tr/ucretli-modul/537-dle-video-part-sistemi.html\">VideoPart</a> module, if any video part content delete, you can delete part or replace with text";
+$lang['lc_39'] = "Active";
+$lang['lc_40'] = "Passive";
+//$lang['lc_41'] = "Delete part";
+//$lang['lc_42'] = "Replace with text";
+//$lang['lc_43'] = "Replacement text for part";
+$lang['lc_44'] = "Number of will be checked URL for each control";
+$lang['lc_45'] = "Checks URLs till you specified. Thinks this value with timeout value. Choose a low number as possible.";
+$lang['lc_46'] = "Connection timeout for URL control";
+$lang['lc_47'] = "If connection time exceeds you specified, checking will be skipped. This prevents system locking.";
+$lang['lc_48'] = "Data List integration";
+$lang['lc_49'] = "If you activate this setting, you can use with <a target=\"_blank\" href=\"#\">Data List</a> module, please type URL field of Data List module";
+$lang['lc_50'] = "Type name of field, contains URL";
+
+// ajax
+$lang['lc_27'] = "Настройки успешно сохранены.";
+//$lang['lc_28'] = "Записи успешно удалены.";
+$lang['lc_29'] = "Уведомление отправлено успешно.";
+
+// mass
+$lang['lc_35'] = "Записи ссылки успешно удалены.";
+
+?>

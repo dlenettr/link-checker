@@ -1,0 +1,60 @@
+<?php
+
+// inc
+$lang['lc_0'] = "Tümünü Kaldır";
+$lang['lc_1'] = "Kırık Linkler";
+$lang['lc_2'] = "Makalelerdeki kırık linklerin listesi";
+$lang['lc_3'] = "Kırık link içeren makaleler";
+$lang['lc_4'] = "Eklenme Tarihi - Makale Başlığı";
+$lang['lc_5'] = "Makaledeki kırık link sayısı";
+$lang['lc_6'] = "Kırık linkleri göster";
+$lang['lc_7'] = "Hatalı bilgi";
+$lang['lc_8'] = "Gerekli bazı bilgiler sağlanamadı";
+$lang['lc_9'] = "İlave alan adı";
+$lang['lc_10'] = "Kırık link";
+$lang['lc_11'] = "Son Kontrol";
+$lang['lc_12'] = "Kontrol Sayacı";
+$lang['lc_13'] = "İşlemler";
+$lang['lc_14'] = "Sil";
+$lang['lc_15'] = "Ayarlar";
+$lang['lc_16'] = "Sistem ayarları";
+$lang['lc_17'] = "Kaydet";
+$lang['lc_18'] = "URL'yi yazın. Kod yerine {code} tagını kullanın.";
+$lang['lc_19'] = "Her satıra bir yazı gelecek şekilde girin";
+$lang['lc_20'] = "<b>URL ( Link ):</b> Sayfa URL'si ( Direkt Link )";
+$lang['lc_21'] = "<b>Kod ( Video / Sayfa Kodu )</b> Video veya sayfa kodu. Örnek: u2UhQAhLc2Y";
+$lang['lc_22'] = "Kontol Etme";
+$lang['lc_23'] = "Kontrol Et";
+$lang['lc_24'] = "Kod";
+$lang['lc_25'] = "URL";
+$lang['lc_26'] = "Bilgilendirme";
+$lang['lc_30'] = "Bildirim mesajı";
+$lang['lc_31'] = "Makaleyi ekleyen kullanıcıya gönderilecek özel mesaj başlığı ve içeriği";
+$lang['lc_32'] = "Linkler: ";
+$lang['lc_33'] = "Makaleler: ";
+$lang['lc_34'] = "Kırık link kayıdı bulunamadı";
+$lang['lc_36'] = "Ana sayfa";
+$lang['lc_37'] = "VideoPart entegrasyonu";
+$lang['lc_38'] = "Bu ayarı aktifleştirirseniz, <a target=\"_blank\" href=\"https://shop.dle.net.tr/ucretli-modul/537-dle-video-part-sistemi.html\">VideoPart</a> modülü ile entegre bir şekilde çalıştırabilirsiniz. Part tagları içindeki iframe ler silindiğinde partı silibilir veya yerine bir resim atayabilirsiniz.";
+$lang['lc_39'] = "Aktif";
+$lang['lc_40'] = "Pasif";
+//$lang['lc_41'] = "Partı sil";
+//$lang['lc_42'] = "Yazı ile değiştir";
+//$lang['lc_43'] = "Silinen partlar için yazı giriniz";
+$lang['lc_44'] = "Her kontrolde kaç tane URL kontrol edilsin";
+$lang['lc_45'] = "Belirlediğiniz sayıda URL kontrol edilir. Bu sayıyı zaman aşımı süresi ile birlikte değerlendiriniz. Mümkün olduğunca düşük bir sayı seçiniz.";
+$lang['lc_46'] = "URL kontrolü için zaman aşımı süresi";
+$lang['lc_47'] = "URL kontrol esnasında belirlenen vakitten fazla sürmesi beklenmeden atlanır. Böylece sistemin takılması engellenir.";
+$lang['lc_48'] = "Data List entegrasyonu";
+$lang['lc_49'] = "Bu ayarı aktifleştirirseniz, <a target=\"_blank\" href=\"#\">Data List</a> modülü ile entegre bir şekilde çalıştırabilirsiniz. URL içeren alan adını giriniz.";
+$lang['lc_50'] = "URL içeren alan adını giriniz";
+
+// ajax
+$lang['lc_27'] = "Ayarlar başarıyla kaydedildi.";
+//$lang['lc_28'] = "Kayıt başarıyla silindi.";
+$lang['lc_29'] = "Bildirim başarıyla gönderildi.";
+
+// mass
+$lang['lc_35'] = "Link kayıtları başarıyla silindi";
+
+?>
