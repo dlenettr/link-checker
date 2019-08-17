@@ -1,7 +1,7 @@
 # Link Checker
-<img src="https://img.shields.io/badge/dle-12.1-007dad.svg"> <img src="https://img.shields.io/badge/lang-tr,en,ru-ce600f.svg"> <img src="https://img.shields.io/badge/license-MIT-60ce0f.svg">
+<img src="https://img.shields.io/badge/dle-12.1-007dad.svg"> <img src="https://img.shields.io/badge/lang-tr-ce600f.svg"> <img src="https://img.shields.io/badge/lang-en-ce600f.svg"> <img src="https://img.shields.io/badge/lang-ru-ce600f.svg"> <img src="https://img.shields.io/badge/license-MIT-60ce0f.svg">
 
-Link Checker ile ilave alanlara girdiğiniz linkleri veya kodları, cron ile belirdeğiniz gün veya zaman aralığında otomatik olarak yaptırabilirsiniz. Çalışmayan linkleri admin panelinde gözükecektir. Son kontrol tarihini ve kaç kez hatalı olarak kontrol edildiğini görebileceksiniz. Aynı zaman belirlediğiniz şablon ile kırık link bulunan makalenin yazarına tek tıklama ile bildirim gönderebilirsiniz.
+Link Checker ile ilave alanlara girdiğiniz linkleri veya kodları, cron ile belirlediğiniz gün veya zaman aralığında otomatik olarak yaptırabilirsiniz. Kontrol sonrasında çalışmayan linkler kaydedilecek ve admin panelinden takip edilebilecektir. Ayrıca hata alınan her linkin son kontrol tarihini ve kaç kez kontrol edildiği bilgisi de mevcuttur. Aynı zamanda belirlediğiniz şablon ile kırık link bulunan makalenin yazarına tek tıklama ile bildirim gönderebilirsiniz.
 
 ## Kurulum
 1) Dosyaları sunucuya atarak install_module.php çalıştırın ve silin.
@@ -10,7 +10,7 @@ Link Checker ile ilave alanlara girdiğiniz linkleri veya kodları, cron ile bel
 Eğer ilave alanınıza direkt link giriyorsanız, URL seçeneğini seçin.
 Eğer dosya ID, video kodu vb. kısa kodlar giriyorsanız, yazacağınız url şablonu ile sistemin bunu direkt link olarak algılamasını sağlayabilirsiniz.
 
-Ayrıca istediğiniz her site ile kullanabilirsiniz. Esnek yapısı sayesinde herhangi bir düzenleme yapmanıza gerek yoktur.
+Ayrıca her site ile kullanabilirsiniz. Esnek yapısı sayesinde herhangi bir düzenleme yapmanıza gerek yoktur.
 Tek yapmanız gereken, o site için hatalı linkte nasıl bir sonuç verdiğine bakmaktır. Örneğin: youtube da silinmiş bir video adresine tıkladığınızda sayfada yazan "Not found", "Video Silinmiş" vb. yazıları ayarlara kaydetmeniz gereklidir. Yani kontrol esnasında sayfaya bakıldığında, eğer yazdığınız yazıların herhangi birini içeriyorsa otomatik olarak "Kırık Link" olarak raporlara eklenecektir.
 
 Cron scripti 4 fonksiyona sahiptir, 2 fonksiyonu için kontrol panelinizden cron tanımlaması yapabilirsiniz. Aynı zamanda bu özellikleri URL ile de çalıştırabilirsiniz.
@@ -87,23 +87,9 @@ işlemini buradan yapabilirsiniz.
 ![Ekran 3](/docs/screen3.png?raw=true)
 
 ## Tarihçe
-* Version: **1.3** ( 09.03.2018 ) - DLE 12.1, 12.0
-  * DataList modülü ile uyumlu hale getirildi.
-
-* Version: **1.2** ( 24.01.2018 ) - DLE 12.1, 12.0
-  * URL kontrolü tamamen CURL ile yapılacak şekilde ayarlandı.
-  * Cron scripti yeniden yazıldı ve test yapılabilecek sistem eklendi.
-  * Her sorgu için max kaç sn bekleneceği belirlenebilir yapıldı.
-  * Her çalışmada kaç URL işleme alınacağı belirlenebilir yapıldı.
-  * 10.2 ve öncesine ait destek yeni sürümle birlikte kaldırıldı.
-  * Video part için part silme / yazı ile değiştirme kaldırıldı. Yerine admine panele kayıt eklenecek.
-
-* Version: **1.1** ( 26.12.2017 ) - DLE 12.1, 12.0
-  * DLE 12.0 sürümü için admin panel tema düzenlemesi yapıldı.
-  * VideoPart modülüyle entegre olarak çalışması için özellik eklendi.
-
-* Version: **1.0** ( 12.02.2015 ) - DLE 10.x, 9.x
-  * İlave alanlar ile kullanabilme
-  * Geniş sürüm uyumluluğu
-  * CronJob ile çalışabilme
-  * Admin panelden ayar yapabileme ve AJAX ile hızlı işlemler.
+| Version | Tarih | Uyumluluk | Yenilikler |
+| ------- | ----- | --------- | ---------- |
+| **1.3** | 09.03.2018 | 12.0, 12.1 | DataList modülü ile uyumlu hale getirildi. |
+| **1.2** | 24.01.2018 | 12.0, 12.1 | URL kontrolü tamamen CURL ile yapılacak şekilde ayarlandı.<br>Cron scripti yeniden yazıldı ve test yapılabilecek sistem eklendi.<br>Her sorgu için max kaç sn bekleneceği belirlenebilir yapıldı.<br>Her çalışmada kaç URL işleme alınacağı belirlenebilir yapıldı.<br>10.2 ve öncesine ait destek yeni sürümle birlikte kaldırıldı.<br>Video part için part silme / yazı ile değiştirme kaldırıldı. Yerine admine panele kayıt eklenecek. |
+| **1.1** | 26.12.2017 | 12.0, 12.1 | DLE 12.0 sürümü için admin panel tema düzenlemesi yapıldı.<br>VideoPart modülüyle entegre olarak çalışması için özellik eklendi.|
+| **1.0** | 12.02.2015 | 9.x, 10.x | İlave alanlar ile kullanabilme<br>Geniş sürüm uyumluluğu.<br>CronJob ile çalışabilme.<br>Admin panelden ayar yapabileme ve AJAX ile hızlı işlemler. |
