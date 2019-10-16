@@ -1,11 +1,10 @@
 <?php
 /*
 =============================================
- Name      : MWS Link Checker v1.1
+ Name      : MWS Link Checker v1.4
  Author    : Mehmet Hanoğlu ( MaRZoCHi )
- Site      : http://dle.net.tr/
+ Site      : https://mehmethanoglu.com.tr
  License   : MIT License
- Date      : 26.12.2017
 =============================================
 */
 
@@ -16,6 +15,8 @@ if ( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
 require_once ENGINE_DIR . '/data/linkchecker.conf.php';
 
 require_once ROOT_DIR . "/language/" . $config['langs'] . "/linkchecker.lng";
+
+$header_title = "<i class=\"fa fa-link position-left\"></i><span class=\"text-semibold\">" . $lang['lc_1'] . "</span>";
 
 function makeDropDown( $options, $name, $selected, $id = "" ) {
 	$id = ( ! empty( $id ) ) ? " id=\"$id\"" : "";
@@ -37,7 +38,7 @@ if ( ! $action ) $action = "list";
 
 if ( $action == "list" ) {
 
-	echoheader( "<i class=\"fa fa-link\"></i> " . $lang['lc_1'], $lang['lc_2'] );
+	echoheader( $header_title, ['?mod=linkchecker' => 'Link Checker', '' => $lang['lc_2']]);
 
 	echo <<< HTML
 <script>
@@ -75,14 +76,14 @@ HTML;
 		<b>{$lang['lc_3']}</b>
 		<div class="heading-elements">
 			<ul class="icons-list">
-				<li><a href="{$PHP_SELF}?mod=linkchecker&amp;action=settings"><i class="fa fa-wrench position-left"></i> {$lang['lc_15']}</a></li>
+				<li><a href="{$PHP_SELF}?mod=linkchecker&amp;action=settings"><i class="fa fa-wrench position-left"></i> {$lang['lc_16']}</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class="box-content">
 		<div class="row" style="display: table; min-height:100px;">
 			<div class="col-md-12 text-center" style="display: table-cell; vertical-align:middle;">
-				<p>&nbsp;&nbsp;{$lang['lc_34']}</p>
+				<p style="padding: 10px">&nbsp;&nbsp;{$lang['lc_34']}</p>
 			</div>
 		</div>
 	</div>
@@ -217,7 +218,7 @@ function ckeck_uncheck_all() {
 function LCNotify( id ) {
 	$.ajax( {
 		type :'post',
-		url  :'engine/ajax/linkchecker.ajax.php',
+		url  :'engine/ajax/controller.php?mod=linkchecker&user_hash={$dle_login_hash}',
 		data : { lc_action: 'notify', lc_id: id },
 		beforeSend: function( ) {
 			ShowLoading();
@@ -236,11 +237,6 @@ function LCNotify( id ) {
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<b>{$lang['lc_3']}</b>
-			<div class="heading-elements">
-				<ul class="icons-list">
-					<li><a href="{$PHP_SELF}?mod=linkchecker&amp;action=settings"><i class="fa fa-wrench position-left"></i> {$lang['lc_15']}</a></li>
-				</ul>
-			</div>
 		</div>
 		<div class="box-content">
 			<table class="table table-normal table-striped">
@@ -362,14 +358,14 @@ HTML;
 
 	$id = $_REQUEST['id'];
 
-	echoheader( "<i class=\"fa fa-link\"></i> " . $lang['lc_1'], $lang['lc_2'] );
+	echoheader( $header_title, ['?mod=linkchecker' => 'Link Checker', '' => $lang['lc_2']]);
 
 	echo <<<HTML
 <script>
 function LCDelete( id ) {
 	$.ajax( {
 		type :'post',
-		url  :'engine/ajax/linkchecker.ajax.php',
+		url  :'engine/ajax/controller.php?mod=linkchecker&user_hash={$dle_login_hash}',
 		data : { lc_action: 'del', lc_id: id },
 		beforeSend: function( ) {
 			ShowLoading();
@@ -426,7 +422,7 @@ HTML;
 
 } else if ( $action == "settings" ) {
 
-	echoheader( "<i class=\"fa fa-link\"></i> " . $lang['lc_1'], $lang['lc_2'] );
+	echoheader( $header_title, ['?mod=linkchecker' => 'Link Checker', '' => $lang['lc_16']]);
 
 	$xfs = xfieldsload();
 
@@ -452,7 +448,7 @@ function LCSaveSettings() {
 	var formData1 = $("form#settings_form").serialize();
 	$.ajax( {
 		type :'post',
-		url  :'engine/ajax/linkchecker.ajax.php',
+		url  :'engine/ajax/controller.php?mod=linkchecker&user_hash={$dle_login_hash}',
 		data :formData1,
 		beforeSend: function( ) {
 			ShowLoading();
@@ -498,11 +494,6 @@ $(document).ready( function() {
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<b>{$lang['lc_16']}</b>
-		<div class="heading-elements">
-			<ul class="icons-list">
-				<li><a href="{$PHP_SELF}?mod=linkchecker"><i class="fa fa-home position-left"></i> {$lang['lc_36']}</a></li>
-			</ul>
-		</div>
 	</div>
 	<div class="box-content">
 		<div class="row box-section">
@@ -514,7 +505,7 @@ $(document).ready( function() {
 					</td>
 					<td class="col-xs-6 col-sm-6 col-md-5" id="{$xf['0']}_td">
 						<input style="width: 90%;" class="form-control" name="save[pm_title]" value="{$lset['pm_title']}" type="text"><br /><br />
-						<textarea name="save[pm_text]" class="form-control" style="width: 100%; height: 80px;">{$lset['pm_text']}</textarea>
+						<textarea name="save[pm_text]" class="form-control" style="width: 100%; height: 180px;">{$lset['pm_text']}</textarea>
 					</td>
 				</tr>
 
@@ -647,5 +638,3 @@ HTML;
 
 	echofooter();
 }
-
-?>

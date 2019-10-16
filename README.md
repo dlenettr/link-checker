@@ -1,10 +1,14 @@
 # Link Checker
-<img src="https://img.shields.io/badge/dle-12.1-007dad.svg"> <img src="https://img.shields.io/badge/lang-tr,en,ru-ce600f.svg"> <img src="https://img.shields.io/badge/license-MIT-60ce0f.svg">
+<img src="https://img.shields.io/badge/dle-13.3-007dad.svg"> <img src="https://img.shields.io/badge/lang-tr,en,ru-ce600f.svg"> <img src="https://img.shields.io/badge/license-MIT-60ce0f.svg">
 
-Link Checker ile ilave alanlara girdiğiniz linkleri veya kodları, cron ile belirdeğiniz gün veya zaman aralığında otomatik olarak yaptırabilirsiniz. Çalışmayan linkleri admin panelinde gözükecektir. Son kontrol tarihini ve kaç kez hatalı olarak kontrol edildiğini görebileceksiniz. Aynı zaman belirlediğiniz şablon ile kırık link bulunan makalenin yazarına tek tıklama ile bildirim gönderebilirsiniz.
+Link Checker ile ilave alanlara girdiğiniz linkleri veya kodları, cron ile belirlediğiniz gün veya zaman aralığında otomatik olarak yaptırabilirsiniz. Kontrol sonrasında çalışmayan linkler kaydedilecek ve admin panelinden takip edilebilecektir. Ayrıca hata alınan her linkin son kontrol tarihini ve kaç kez kontrol edildiği bilgisi de mevcuttur. Aynı zamanda belirlediğiniz şablon ile kırık link bulunan makalenin yazarına tek tıklama ile bildirim gönderebilirsiniz.
 
 ## Kurulum
-1) Dosyaları sunucuya atarak install_module.php çalıştırın ve silin.
+**1)** Eklentiyi zip olarak admin panelden  yükleyebilirsiniz. Fakat DLE eklenti sistemindeki yükleme alanı  Github'dan indirilen ziplerin direkt olarak yüklenmesi için uygun değil. Bu nedenle zip olarak modülü indirip, modülü bir dizine çıkartıp. XML  dosyasının bulunduğu dizindeki tüm dosyaları seçerek zip oluşturun.
+
+**2)** Ardından eklentiyi zip dosyası sitenize yükleyin.
+
+
 
 ## Konfigürasyon
 Eğer ilave alanınıza direkt link giriyorsanız, URL seçeneğini seçin.
@@ -82,28 +86,15 @@ işlemini buradan yapabilirsiniz.
 
 
 ## Ekran Görüntüleri
-![Ekran 1](/docs/screen1.png?raw=true)
-![Ekran 2](/docs/screen2.png?raw=true)
-![Ekran 3](/docs/screen3.png?raw=true)
+![Ekran 1](./docs/screen1.png?raw=true)
+![Ekran 2](./docs/screen2.png?raw=true)
+![Ekran 3](./docs/screen3.png?raw=true)
 
 ## Tarihçe
-* Version: **1.3** ( 09.03.2018 ) - DLE 12.1, 12.0
-  * DataList modülü ile uyumlu hale getirildi.
-
-* Version: **1.2** ( 24.01.2018 ) - DLE 12.1, 12.0
-  * URL kontrolü tamamen CURL ile yapılacak şekilde ayarlandı.
-  * Cron scripti yeniden yazıldı ve test yapılabilecek sistem eklendi.
-  * Her sorgu için max kaç sn bekleneceği belirlenebilir yapıldı.
-  * Her çalışmada kaç URL işleme alınacağı belirlenebilir yapıldı.
-  * 10.2 ve öncesine ait destek yeni sürümle birlikte kaldırıldı.
-  * Video part için part silme / yazı ile değiştirme kaldırıldı. Yerine admine panele kayıt eklenecek.
-
-* Version: **1.1** ( 26.12.2017 ) - DLE 12.1, 12.0
-  * DLE 12.0 sürümü için admin panel tema düzenlemesi yapıldı.
-  * VideoPart modülüyle entegre olarak çalışması için özellik eklendi.
-
-* Version: **1.0** ( 12.02.2015 ) - DLE 10.x, 9.x
-  * İlave alanlar ile kullanabilme
-  * Geniş sürüm uyumluluğu
-  * CronJob ile çalışabilme
-  * Admin panelden ayar yapabileme ve AJAX ile hızlı işlemler.
+| Version | Tarih | Uyumluluk | Yenilikler |
+| ------- | ----- | --------- | ---------- |
+| **1.4** | 17.10.2019 | 13.0+ | Yeni DLE sürümleri ile uyumlu hale getirildi. |
+| **1.3** | 09.03.2018 | 12.0, 12.1 | DataList modülü ile uyumlu hale getirildi. |
+| **1.2** | 24.01.2018 | 12.0, 12.1 | URL kontrolü tamamen CURL ile yapılacak şekilde ayarlandı.<br>Cron scripti yeniden yazıldı ve test yapılabilecek sistem eklendi.<br>Her sorgu için max kaç sn bekleneceği belirlenebilir yapıldı.<br>Her çalışmada kaç URL işleme alınacağı belirlenebilir yapıldı.<br>10.2 ve öncesine ait destek yeni sürümle birlikte kaldırıldı.<br>Video part için part silme / yazı ile değiştirme kaldırıldı. Yerine admine panele kayıt eklenecek. |
+| **1.1** | 26.12.2017 | 12.0, 12.1 |  |
+| **1.0** | 12.02.2015 | 9.x, 10.x | İlave alanlar ile kullanabilme<br>Geniş sürüm uyumluluğu.<br>CronJob ile çalışabilme.<br>Admin panelden ayar yapabileme ve AJAX ile hızlı işlemler. |

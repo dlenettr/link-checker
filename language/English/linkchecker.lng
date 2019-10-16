@@ -35,7 +35,7 @@ $lang['lc_33'] = "articles: ";
 $lang['lc_34'] = "Broken link record not found";
 $lang['lc_36'] = "Main Page";
 $lang['lc_37'] = "VideoPart integration";
-$lang['lc_38'] = "If you activate this setting, you can use with <a target=\"_blank\" href=\"https://shop.dle.net.tr/ucretli-modul/537-dle-video-part-sistemi.html\">VideoPart</a> module, if any video part content delete, you can delete part or replace with text";
+$lang['lc_38'] = "If you activate this setting, you can use with <a target=\"_blank\" href=\"https://github.com/dlenettr/video-part\">VideoPart</a> module, if any video part content delete, you can delete part or replace with text";
 $lang['lc_39'] = "Active";
 $lang['lc_40'] = "Passive";
 //$lang['lc_41'] = "Delete part";
@@ -46,7 +46,7 @@ $lang['lc_45'] = "Checks URLs till you specified. Thinks this value with timeout
 $lang['lc_46'] = "Connection timeout for URL control";
 $lang['lc_47'] = "If connection time exceeds you specified, checking will be skipped. This prevents system locking.";
 $lang['lc_48'] = "Data List integration";
-$lang['lc_49'] = "If you activate this setting, you can use with <a target=\"_blank\" href=\"#\">Data List</a> module, please type URL field of Data List module";
+$lang['lc_49'] = "If you activate this setting, you can use with <a target=\"_blank\" href=\"https://github.com/dlenettr/data-list\">Data List</a> module, please type URL field of Data List module";
 $lang['lc_50'] = "Type name of field, contains URL";
 
 // ajax

@@ -1,9 +1,9 @@
 <?php
 /*
 =============================================
- Name      : MWS Link Checker v1.0
+ Name      : MWS Link Checker v1.4
  Author    : Mehmet Hanoğlu ( MaRZoCHi )
- Site      : http://dle.net.tr/   (c) 2015
+ Site      : https://mehmethanoglu.com.tr
  License   : MIT License
 =============================================
 */
@@ -19,6 +19,3 @@ foreach( $selected_news as $news_id ) {
 include ROOT_DIR . "/language/" . $config['langs'] . "/linkchecker.lng";
 
 msg( "info", $lang['db_ok'], $lang['lc_35'], "?mod=linkchecker" );
-
-
-?>

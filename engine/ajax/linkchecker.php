@@ -1,57 +1,26 @@
 <?php
 /*
 =============================================
- Name      : MWS Link Checker v1.1
+ Name      : MWS Link Checker v1.4
  Author    : Mehmet Hanoğlu ( MaRZoCHi )
- Site      : http://dle.net.tr/
+ Site      : https://mehmethanoglu.com.tr
  License   : MIT License
- Date      : 26.12.2017
 =============================================
 */
 
-@error_reporting ( E_ALL ^ E_WARNING ^ E_NOTICE );
-@ini_set ( 'display_errors', true );
-@ini_set ( 'html_errors', false );
-@ini_set ( 'error_reporting', E_ALL ^ E_WARNING ^ E_NOTICE );
-
-define( 'DATALIFEENGINE', true );
-define( 'ROOT_DIR', substr( dirname(  __FILE__ ), 0, -12 ) );
-define( 'ENGINE_DIR', ROOT_DIR . '/engine' );
-
-include ENGINE_DIR . "/data/config.php";
-include ROOT_DIR . "/language/" . $config['langs'] . "/linkchecker.lng";
-
-if ( $config['version_id'] < "9.7" ) {
-	@session_start();
+if ( !defined('DATALIFEENGINE') ) {
+	header( "HTTP/1.1 403 Forbidden" );
+	header ( 'Location: ../../' );
+	die( "Hacking attempt!" );
 }
 
-if ( $config['version_id'] > "10.3" ) {
-	date_default_timezone_set ( $config['date_adjust'] );
-	$_TIME = time();
-} else {
-	$_TIME = time() + ( $config['date_adjust'] * 60 );
+if ( $_REQUEST['user_hash'] == "" OR $_REQUEST['user_hash'] != $dle_login_hash ) {
+	die( "error" );
 }
-
-if ( $config['http_home_url'] == "" ) {
-	$config['http_home_url'] = explode( "engine/ajax/linkchecker.ajax.php", $_SERVER['PHP_SELF'] );
-	$config['http_home_url'] = reset( $config['http_home_url'] );
-	$config['http_home_url'] = "http://" . $_SERVER['HTTP_HOST'] . $config['http_home_url'];
-}
-
-require_once ENGINE_DIR . '/classes/mysql.php';
-require_once ENGINE_DIR . '/data/dbconfig.php';
-require_once ENGINE_DIR . '/modules/functions.php';
-require_once ENGINE_DIR . '/classes/templates.class.php';
-require_once ENGINE_DIR . '/modules/sitelogin.php';
-
-if ( $config['version_id'] >= "9.7" ) {
-	dle_session();
-}
-
-if ( ! $is_logged ) die( "Hacking attempt!" );
 
 require_once ENGINE_DIR . '/data/linkchecker.conf.php';
 
+require_once ROOT_DIR . "/language/" . $config['langs'] . "/linkchecker.lng";
 
 if ( isset( $_POST['save'] ) ) {
 	$settings = $lset;
@@ -85,7 +54,7 @@ if ( isset( $_POST['save'] ) ) {
 	$replace = array( "", "" );
 
 	$handler = fopen( ENGINE_DIR . '/data/linkchecker.conf.php', "w" );
-	fwrite( $handler, "<?PHP \n\n//MWS Link Checker Configurations\n\n\$lset = array (\n\n" );
+	fwrite( $handler, "<?PHP \n\n//MWS Link Checker Configurations\n\n\$lset = [\n\n" );
 	foreach ( $settings as $name => $value ) {
 		$value = str_replace( "\n", "__EOL__", $value );
 		$value = trim(strip_tags(stripslashes( $value )));
@@ -116,7 +85,7 @@ if ( isset( $_POST['save'] ) ) {
 		$name = str_ireplace( "base64_decode", "base64_dec&#111;de", $name );
 		fwrite( $handler, "'{$name}' => '{$value}',\n\n" );
 	}
-	fwrite( $handler, ");\n\n?>" );
+	fwrite( $handler, "];\n\n?>" );
 	fclose( $handler );
 
 	echo $lang['lc_27'];
