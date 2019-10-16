@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dleplugin>
+	<name>Link Checker</name>
+	<description>Sitenizdeki kırık linkleri otomatik olarak denetleyin</description>
+	<icon>engine/skins/images/linkchecker.png</icon>
+	<version>1.4</version>
+	<dleversion>13.1</dleversion>
+	<versioncompare>greater</versioncompare>
+	<upgradeurl></upgradeurl>
+	<filedelete>0</filedelete>
+	<needplugin></needplugin>
+	<mnotice>0</mnotice>
+	<mysqlinstall><![CDATA[CREATE TABLE IF NOT EXISTS `{prefix}_linkchecker` (
+	id int(11) NOT NULL AUTO_INCREMENT,
+	news_id int(11) NOT NULL,
+	xfname varchar(200) COLLATE latin1_general_ci NOT NULL,
+	xfvalue varchar(255) COLLATE latin1_general_ci NOT NULL,
+	cdate varchar(25) COLLATE latin1_general_ci NOT NULL,
+	nfound int(5) NOT NULL,
+	PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;]]></mysqlinstall>
+	<mysqlupgrade><![CDATA[]]></mysqlupgrade>
+	<mysqlenable><![CDATA[INSERT INTO {prefix}_admin_sections (name, title, descr, icon, allow_groups) VALUES ('linkchecker', 'Link Checker', 'Sitenizdeki kırık linkleri otomatik olarak denetleyin', 'linkchecker.png', '1');]]></mysqlenable>
+	<mysqldisable><![CDATA[DELETE FROM {prefix}_admin_sections WHERE name = 'linkchecker';]]></mysqldisable>
+	<mysqldelete><![CDATA[DROP TABLE IF NOT EXISTS `{prefix}_linkchecker`;]]></mysqldelete>
+	<phpinstall><![CDATA[]]></phpinstall>
+	<phpupgrade><![CDATA[]]></phpupgrade>
+	<phpenable><![CDATA[]]></phpenable>
+	<phpdisable><![CDATA[]]></phpdisable>
+	<phpdelete><![CDATA[]]></phpdelete>
+	<notice><![CDATA[]]></notice>
+	<file name="engine/inc/massactions.php">
+		<operation action="before">
+			<searchcode><![CDATA[elseif( $action == "do_mass_delete" ) {]]></searchcode>
+			<replacecode><![CDATA[// Link Checker
+} else if ( $action == "mass_link_discard" ) {
+	include ENGINE_DIR . "/inc/linkchecker.mass.php";
+// Link Checker]]></replacecode>
+		</operation>
+	</file>
+</dleplugin>
